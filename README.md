@@ -1,26 +1,20 @@
 OTP Bank Payment Gateway for WooCommerce
 =========================
 
-The plugin supports the 3 step payment via the [OTP
-Bank](https://www.otpbank.hu/). The customer will be redirected to the OTP's
-secure website and the payment will be made there.
+The plugin supports the 3 step payment via the [OTP Bank](https://www.otpbank.hu/). The customer will be redirected to the OTP's secure website and the payment will be made there.
 
 
 ## Configuration options
 
-After installing the plugin, you can configre your WooCommerce plugin via the
-WooCommerce admin interface.
+After installing the plugin, you can configre your WooCommerce plugin via the WooCommerce admin interface.
 
 **Shop ID**
 
-Each shop has it's unique webshop id. This is also known as PosID. Note that
-your private key will be provided by the OTP and it's without a leading **#**.
-Only the testing keys are started with character **#**.
+Each shop has it's unique webshop id. This is also known as PosID. Note that your private key will be provided by the OTP and it's without a leading **#**. Only the testing keys are started with character **#**.
 
 **Shop key**
 
-Your custom key will be provided by the OTP. The testing key is shown in the
-Test credentials section below.
+Your custom key will be provided by the OTP. The testing key is shown in the Test credentials section below.
 
 **Shop lang**
 
@@ -32,8 +26,7 @@ The currency used for the payment.
 
 ## Test credentials
 
-For testing purpose, OTP provides test cards and pos ids for your site. You can
-use the cards and pos ids below to test your site.
+For testing purpose, OTP provides test cards and pos ids for your site. You can use the cards and pos ids below to test your site.
 
 **Card numbers for testing**
 
