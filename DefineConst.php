@@ -7,7 +7,7 @@
 * - banki tranzakciók kódjai
 * - tranzakció indításhoz kötödõ xml attribútum nevek
 * - használt konfigurációs állományok (.config) kulcsai
-* 
+*
 * @version 4.0
 *
 */
@@ -25,13 +25,9 @@ if (!defined('LOG_DATE_FORMAT')) define ('LOG_DATE_FORMAT', 'Y.m.d. H:i:s');
 define('WF_TRANZAZONGENERALAS', 'WEBSHOPTRANZAZONGENERALAS');
 define('WF_HAROMSZEREPLOSFIZETES', 'WEBSHOPFIZETES');
 define('WF_HAROMSZEREPLOSFIZETESINDITAS', 'WEBSHOPFIZETESINDITAS');
-define('WF_KETSZEREPLOSFIZETES', 'WEBSHOPFIZETESKETSZEREPLOS');
 define('WF_TRANZAKCIOSTATUSZ', 'WEBSHOPTRANZAKCIOLEKERDEZES');
-define('WF_KETLEPCSOSFIZETESLEZARAS', 'WEBSHOPFIZETESLEZARAS');
-define('WF_FIZETESJOVAIRAS', 'WEBSHOPFIZETESJOVAIRAS');
-define('WF_KULCSLEKERDEZES', 'WEBSHOPKULCSLEKERDEZES');
 
-/* A válasz xml-ben mejelenõ sikeres végrehajtásra utaló üzenetkód. */ 
+/* A válasz xml-ben mejelenõ sikeres végrehajtásra utaló üzenetkód. */
 define ('WF_SUCCESS_TEXTS', 'SIKER');
 
 /* Alap xml elemek. */
@@ -83,7 +79,7 @@ define('QUERYENDDATE', 'isEndDate');
 /* Input xml változó nevek - kétlépcsõs fizetés lezárásához. */
 define('APPROVED', 'isApproval');
 
-/* Az input xml-ben megjelenõ két fajta logikai érték szöveges formája. */ 
+/* Az input xml-ben megjelenõ két fajta logikai érték szöveges formája. */
 define('REQUEST_TRUE_CONST', 'TRUE');
 define('REQUEST_FALSE_CONST', 'FALSE');
 
@@ -115,5 +111,5 @@ define('RESENDDELAY',  1);
 /* Banki kommunikáció: Újraküldések csak akkor lehetségesek, ha a lenti szöveg
    szerepel az elutasításhoz tartozó kivételben. */
 define('RESEND_ERRORPATTERN',  "Maximum workflow number is reached");
-  
+
 ?>

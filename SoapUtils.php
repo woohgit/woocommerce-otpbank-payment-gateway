@@ -20,7 +20,7 @@ class SoapUtils {
     * 
     * @return SoapClient A banki felülethez illeszkedõ SOAP kliens.
     */
-    function createSoapClient() {
+    public static function createSoapClient() {
         $soapClientProps = array(
             'location' => 'https://www.otpbankdirekt.hu/mwaccesspublic/mwaccess',
             'uri' => 'https://www.otpbankdirekt.hu/mwaccesspublic/mwaccess',
@@ -72,7 +72,7 @@ class SoapUtils {
      *
      * @return boolean true sikeres ping-etés esetén, egyébként false.
      */
-    function startWorkflowSynch($workflowName, $inputXml, $soapClient) {
+    public static function startWorkflowSynch($workflowName, $inputXml, $soapClient) {
         
         $workflowState = NULL;
         $retryCount = 0;

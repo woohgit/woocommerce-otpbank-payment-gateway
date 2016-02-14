@@ -33,7 +33,7 @@ class RequestUtils {
      * @param paramName a paraméter neve
      * @return a paraméter szöveges értéke
      */
-    function getBooleanValue($value, $dflt = false) {
+    public static function getBooleanValue($value, $dflt = false) {
         $boolValue = false;
         
         if (is_bool($value)) {
@@ -62,7 +62,7 @@ class RequestUtils {
      * @param mixed value a logikai vagy string változó
      * @return string a paraméter szöveges értéke
      */
-    function booleanToString($value, $dflt = "FALSE") {
+    public static function booleanToString($value, $dflt = "FALSE") {
         $boolValue = RequestUtils::getBooleanValue($value, NULL);
         return ($boolValue === true ? "TRUE" : ($boolValue === false ? "FALSE" : $dflt));        
     }
@@ -146,7 +146,7 @@ class RequestUtils {
     * @param String paramName a keresett konfigurációs paraméter neve
     * @return string a paraméter értéke vagy null
     */
-    function safeParam($request, $paramName) {
+    public static function safeParam($request, $paramName) {
         return array_key_exists($paramName, $request) ? $request[$paramName] : null;
     }
     
