@@ -144,6 +144,7 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
                 'options'     => array(
                     'HUF'   => __('HUF', 'wooh-otpbank'),
                     'EUR'   => __('EUR', 'wooh-otpbank'),
+                    'USD'   => __('USD', 'wooh-otpbank')
                     ),
                 'desc_tip'    => true,
                 )
