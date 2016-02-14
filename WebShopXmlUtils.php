@@ -24,7 +24,7 @@ class WebShopXmlUtils {
     * 
     * @return DomDocument a létrehozott objektum
     */
-    function getRequestSkeleton($templateName, &$variables) {
+    public static function getRequestSkeleton($templateName, &$variables) {
         $dom = new DomDocument('1.0', WF_INPUTXML_ENCODING);
         $root = $dom->createElement('StartWorkflow');
         $dom->appendChild($root);
@@ -52,7 +52,7 @@ class WebShopXmlUtils {
     * @param string attributeName a változóhoz esetlegesen hozzáadandó attribútum neve
     * @param string attributeValue a változóhoz esetlegesen hozzáadandó attribútum értéke
     */
-    function addParameter($dom, $variables, $name, $value, $attributeName = null, $attributeValue = null) {
+    public static function addParameter($dom, $variables, $name, $value, $attributeName = null, $attributeValue = null) {
         $node = null;
         if (is_bool($value)) {
             $value = $value ? REQUEST_TRUE_CONST : REQUEST_FALSE_CONST;
@@ -100,12 +100,12 @@ class WebShopXmlUtils {
     * 
     * @return DomNode az adott nevû Node / Element vagy NULL
     */
-    function getChildElement($record, $childName) {
+    public static function getChildElement($record, $childName) {
         $result = NULL;
         $childNodes = $record->childNodes;
         for($i = 0; !is_null($childNodes) && $i<= $childNodes->length && is_null($result); $i++){
             $item = $childNodes->item($i);
-            if ($item->nodeName == $childName) 
+            if (isset($item->nodeName) && $item->nodeName == $childName) 
                 $result = $childNodes->item($i);
         }
         return $result;
@@ -121,7 +121,7 @@ class WebShopXmlUtils {
     * 
     * @return string a child node szöveges tartalma
     */
-    function getElementText($record, $childName) {
+    public static function getElementText($record, $childName) {
         $result = NULL;
         $childNode = self::getChildElement($record, $childName);
         if (!is_null($childNode)) $result = $childNode->textContent;
@@ -136,7 +136,7 @@ class WebShopXmlUtils {
     * @param DOMDocument / DOMNode $node a kiértékelés helye
     * @param string $xpath xpath kifejezés
     */
-    function getNodeByXPath($node, $xpath) {
+    public static function getNodeByXPath($node, $xpath) {
         $doc = NULL;
         if (is_a($node, 'DOMDocument')) {
             $doc = $node;
@@ -195,7 +195,7 @@ class WebShopXmlUtils {
     * @param string $responseStr output xml szövege
     * @param WResponse feltöltendõ response objektum
     */
-    function parseOutputXml ($responseStr, $wresponse) {
+    public static function parseOutputXml ($responseStr, $wresponse) {
         $wresponse->response = $responseStr;
         $wresponse->responseDOM = new DomDocument();
         $wresponse->responseDOM->loadXML($wresponse->response);
@@ -233,7 +233,7 @@ class WebShopXmlUtils {
     * 
     * @return string $dom->saveXML()
     */
-    function xmlToString($dom) {
+    public static function xmlToString($dom) {
         return $dom->saveXML();
     }
   

@@ -79,7 +79,7 @@ class ConfigUtils {
     * 
     * @return string a helyettesített szöveg 
     */
-    function substConfigValue($paramValue, $values) {
+    public static function substConfigValue($paramValue, $values) {
         foreach ($values as $key => $value) {
             $paramValue = str_replace("{" . $key ."}", $value, $paramValue);
         }
