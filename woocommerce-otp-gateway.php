@@ -5,7 +5,7 @@
  * Description: Adds OTP Payment Gateway to Woocommerce e-commerce plugin
  * Author:      Adam Papai
  * Author URI:  http://www.wooh.hu
- * Version:     1.1.0
+ * Version:     1.1.1
  * Text Domain: woocommerce-otpbank
  * Domain Path: /languages/
  * License:     GPLv2

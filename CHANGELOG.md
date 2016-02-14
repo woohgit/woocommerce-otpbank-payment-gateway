@@ -1,3 +1,7 @@
+## v1.1.1
+
+* Remove obsolate code
+
 ## v1.1.0
 
 * Configurability via the WooCommerce admin interface
