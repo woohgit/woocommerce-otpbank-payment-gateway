@@ -6,7 +6,7 @@ The plugin supports the 3 step payment via the [OTP Bank](https://www.otpbank.hu
 
 ## Configuration options
 
-After installing the plugin, you can configre your WooCommerce plugin via the WooCommerce admin interface.
+After installing the plugin, you can configure the plugin via the WooCommerce admin interface.
 
 **Shop ID**
 
@@ -27,6 +27,8 @@ The currency used for the payment.
 ## Test credentials
 
 For testing purpose, OTP provides test cards and pos ids for your site. You can use the cards and pos ids below to test your site.
+
+Note: All PosIDs and RSA keys has to be pasted as they're shown here.
 
 **Card numbers for testing**
 
