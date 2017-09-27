@@ -3,6 +3,9 @@ OTP Bank Payment Gateway for WooCommerce
 
 The plugin supports the 3 step payment via the [OTP Bank](https://www.otpbank.hu/). The customer will be redirected to the OTP's secure website and the payment will be made there.
 
+## Installation
+
+Download the [latest stable version](https://github.com/woohgit/woocommerce-otpbank-payment-gateway/releases/latest) and install it simply just like any other WordPress / WooCommerce plugin.
 
 ## Configuration options
 
