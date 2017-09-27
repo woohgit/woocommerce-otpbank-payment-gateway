@@ -189,7 +189,12 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
 
 
         $_REQUEST['posId']      = $this->pos_id;
-        $_REQUEST['osszeg']     = number_format($customer_order->order_total,2,',','');
+	// if HUF, it should be fixed int
+	if ($this->shop_currency != "HUF") {
+            $_REQUEST['osszeg']     = number_format($customer_order->order_total,2,',','');
+	} else {
+            $_REQUEST['osszeg']     = intval($customer_order->order_total);
+	}
         $_REQUEST['devizanem']  = $this->shop_currency;
         $_REQUEST['nyelvkod']   = $this->shop_lang;
         $_REQUEST['backURL']    = $backURL;
