@@ -1,3 +1,8 @@
+## v1.1.2
+
+* For USD/EUR use decimals
+* Fix for HUF to use only intval()
+
 ## v1.1.1
 
 * Remove obsolate code

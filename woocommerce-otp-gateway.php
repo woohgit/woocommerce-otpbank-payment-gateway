@@ -1,11 +1,11 @@
 <?php
 /*
  * Plugin Name: Woocommerce Payment Gateway for OTP
- * Plugin URI:  http://www.wooh.hu/
+ * Plugin URI:  https://github.com/woohgit/woocommerce-otpbank-payment-gateway
  * Description: Adds OTP Payment Gateway to Woocommerce e-commerce plugin
  * Author:      Adam Papai
- * Author URI:  http://www.wooh.hu
- * Version:     1.1.1
+ * Author URI:  https://www.wooh.hu
+ * Version:     1.1.2
  * Text Domain: woocommerce-otpbank
  * Domain Path: /languages/
  * License:     GPLv2
