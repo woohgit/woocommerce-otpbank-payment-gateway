@@ -23,6 +23,7 @@ function init_wooh_otpbank() {
         return;
     }
 
+    load_plugin_textdomain( 'woocommerce-otpbank', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
     include_once "woocommerce-otp.php";
 
     add_filter('woocommerce_payment_gateways', 'wooh_add_otpbank_gateway');
@@ -36,7 +37,7 @@ function init_wooh_otpbank() {
 add_filter('plugin_action_links_' . plugin_basename( __FILE__ ),'wooh_otpbank_action_links');
 
 function wooh_otpbank_action_links($links) {
-    $plugin_links = array('<a href="'.admin_url('admin.php?page=wc-settings&tab=checkout').'">'.__('Settings', 'otpbank').'</a>',);
+    $plugin_links = array('<a href="'.admin_url('admin.php?page=wc-settings&tab=checkout').'">'.__('Settings', 'woocommerce-otpbank').'</a>',);
     return array_merge($plugin_links,$links);
 }
 

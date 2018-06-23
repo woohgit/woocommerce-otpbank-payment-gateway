@@ -14,9 +14,9 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
 
         // hello
         $this->id                   = "wooh_otpbank";
-        $this->method_title         = __( "OTPBank", 'wooh-otpbank' );
-        $this->method_description   = __("OTPBank Payment Gateway Plug-in for WooCommerce",'wooh-otpbank');
-        $this->title                = __( "OTPBank", 'wooh-otpbank' );
+        $this->method_title         = __( "OTPBank", 'woocommerce-otpbank' );
+        $this->method_description   = __("OTPBank Payment Gateway Plug-in for WooCommerce",'woocommerce-otpbank');
+        $this->title                = __( "OTPBank", 'woocommerce-otpbank' );
         $this->icon                 = null;
         $this->has_fields           = true;
         $this->init_form_fields();
@@ -57,14 +57,14 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
 
                 $fizetesAdatok = $answer->getWebShopFizetesAdatok();
                 $tranzAdatok = current($fizetesAdatok);
-        
+
                 $this->log->add("otpbank", "Fizetes tranzakcio adat lekerdezes befejezve: " . $this->pos_id . " - " . $tranzAzon );
-        
+
                 $responseCode = $tranzAdatok->getPosValaszkod();
 
                 if ($tranzAdatok->isSuccessful()) {
                     $this->log->add("otpbank", "Sikeres fizetes " . $this->pos_id . " - " . $tranzAzon );
-        
+
                     $return_url = $this->get_return_url( $customer_order );
                     $customer_order->add_order_note( __( 'OTP payment completed', 'woocommerce' ) );
                     $woocommerce->cart->empty_cart();
@@ -98,53 +98,53 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
     public function init_form_fields() {
         $this->form_fields = array(
             'enabled' => array(
-                'title'     => __('Enable / Disable', 'wooh-otpbank'),
-                'label'     => __('Enable this payment gateway','wooh-otpbank'),
+                'title'     => __('Enable / Disable', 'woocommerce-otpbank'),
+                'label'     => __('Enable this payment gateway','woocommerce-otpbank'),
                 'type'      => 'checkbox',
                 'default'   => 'no',
                 ),
             'title' => array(
-                'title'     => __('Title', 'wooh-otpbank'),
+                'title'     => __('Title', 'woocommerce-otpbank'),
                 'type'      => 'text',
-                'desc_tip'  => __( 'Payment title the customer will see during the checkout process.', 'wooh-otpbank' ),
-                'default'   => __( 'Pay with OTP', 'wooh-otpbank' ),
+                'desc_tip'  => __( 'Payment title the customer will see during the checkout process.', 'woocommerce-otpbank' ),
+                'default'   => __( 'Pay with OTP', 'woocommerce-otpbank' ),
                 ),
             'description' => array(
-                'title'     => __( 'Description', 'wooh-otpbank' ),
+                'title'     => __( 'Description', 'woocommerce-otpbank' ),
                 'type'      => 'textarea',
-                'desc_tip'  => __( 'Payment description the customer will see during the checkout process.', 'wooh-otpbank' ),
-                'default'   => __( 'Pay securely using OTP Bank', 'wooh-otpbank' ),
+                'desc_tip'  => __( 'Payment description the customer will see during the checkout process.', 'woocommerce-otpbank' ),
+                'default'   => __( 'Pay securely using OTP Bank', 'woocommerce-otpbank' ),
                 'css'       => 'max-width:350px;'
                 ),
             'shop_id' => array(
-                'title'     => __( 'OTPBank ShopID', 'wooh-otpbank' ),
+                'title'     => __( 'OTPBank ShopID', 'woocommerce-otpbank' ),
                 'type'      => 'text',
-                'desc_tip'  => __( 'This is the OTPbank ShopID.', 'wooh-otpbank' ),
+                'desc_tip'  => __( 'This is the OTPbank ShopID.', 'woocommerce-otpbank' ),
                 'default'   => '#02299991',
                 ),
             'shop_key' => array(
-                'title'     => __( 'OTPBank Key', 'wooh-otpbank' ),
+                'title'     => __( 'OTPBank Key', 'woocommerce-otpbank' ),
                 'type'      => 'textarea',
-                'desc_tip'  => __( 'This is the key for the shop.', 'wooh-otpbank' ),
+                'desc_tip'  => __( 'This is the key for the shop.', 'woocommerce-otpbank' ),
                 ),
             'shop_lang' => array(
-                'title'       => __('Shop language', 'wooh-otpbank'),
+                'title'       => __('Shop language', 'woocommerce-otpbank'),
                 'type'        => 'select',
-                'description' => __('Please choose a language', 'wooh-otpbank'),
+                'description' => __('Please choose a language', 'woocommerce-otpbank'),
                 'options'     => array(
-                    'hu'    => __('Hungarian', 'wooh-otpbank'),
-                    'en'    => __('English', 'wooh-otpbank')
+                    'hu'    => __('Hungarian', 'woocommerce-otpbank'),
+                    'en'    => __('English', 'woocommerce-otpbank')
                     ),
                 'desc_tip'    => true,
                 ),
             'shop_currency' => array(
-                'title'       => __('Shop currency', 'wooh-otpbank'),
+                'title'       => __('Shop currency', 'woocommerce-otpbank'),
                 'type'        => 'select',
-                'description' => __('Please choose a currency', 'wooh-otpbank'),
+                'description' => __('Please choose a currency', 'woocommerce-otpbank'),
                 'options'     => array(
-                    'HUF'   => __('HUF', 'wooh-otpbank'),
-                    'EUR'   => __('EUR', 'wooh-otpbank'),
-                    'USD'   => __('USD', 'wooh-otpbank')
+                    'HUF'   => __('HUF', 'woocommerce-otpbank'),
+                    'EUR'   => __('EUR', 'woocommerce-otpbank'),
+                    'USD'   => __('USD', 'woocommerce-otpbank')
                     ),
                 'desc_tip'    => true,
                 )

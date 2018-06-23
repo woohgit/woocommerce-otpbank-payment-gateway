@@ -1,0 +1,131 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce Payment Gateway for OTP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-22 17:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: woocommerce-otp.php:17 woocommerce-otp.php:19
+msgid "OTPBank"
+msgstr ""
+
+#: woocommerce-otp.php:18
+msgid "OTPBank Payment Gateway Plug-in for WooCommerce"
+msgstr ""
+
+#: woocommerce-otp.php:101
+msgid "Enable / Disable"
+msgstr ""
+
+#: woocommerce-otp.php:102
+msgid "Enable this payment gateway"
+msgstr ""
+
+#: woocommerce-otp.php:107
+msgid "Title"
+msgstr ""
+
+#: woocommerce-otp.php:109
+msgid "Payment title the customer will see during the checkout process."
+msgstr ""
+
+#: woocommerce-otp.php:110
+msgid "Pay with OTP"
+msgstr ""
+
+#: woocommerce-otp.php:113
+msgid "Description"
+msgstr ""
+
+#: woocommerce-otp.php:115
+msgid "Payment description the customer will see during the checkout process."
+msgstr ""
+
+#: woocommerce-otp.php:116
+msgid "Pay securely using OTP Bank"
+msgstr ""
+
+#: woocommerce-otp.php:120
+msgid "OTPBank ShopID"
+msgstr ""
+
+#: woocommerce-otp.php:122
+msgid "This is the OTPbank ShopID."
+msgstr ""
+
+#: woocommerce-otp.php:126
+msgid "OTPBank Key"
+msgstr ""
+
+#: woocommerce-otp.php:128
+msgid "This is the key for the shop."
+msgstr ""
+
+#: woocommerce-otp.php:131
+msgid "Shop language"
+msgstr ""
+
+#: woocommerce-otp.php:133
+msgid "Please choose a language"
+msgstr ""
+
+#: woocommerce-otp.php:135
+msgid "Hungarian"
+msgstr ""
+
+#: woocommerce-otp.php:136
+msgid "English"
+msgstr ""
+
+#: woocommerce-otp.php:141
+msgid "Shop currency"
+msgstr ""
+
+#: woocommerce-otp.php:143
+msgid "Please choose a currency"
+msgstr ""
+
+#: woocommerce-otp.php:145
+msgid "HUF"
+msgstr ""
+
+#: woocommerce-otp.php:146
+msgid "EUR"
+msgstr ""
+
+#: woocommerce-otp.php:147
+msgid "USD"
+msgstr ""
+
+#: woocommerce-otp-gateway.php:40
+msgid "Settings"
+msgstr ""
+
+#. Name of the plugin
+msgid "Woocommerce Payment Gateway for OTP"
+msgstr ""
+
+#. Description of the plugin
+msgid "Adds OTP Payment Gateway to Woocommerce e-commerce plugin"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/woohgit/woocommerce-otpbank-payment-gateway"
+msgstr ""
+
+#. Author of the plugin
+msgid "Adam Papai"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.wooh.hu"
+msgstr ""

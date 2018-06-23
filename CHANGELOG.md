@@ -1,3 +1,7 @@
+## v1.2.3
+
+* Proper support for i18n　(Zoltan Batiz)
+
 ## v1.1.2
 
 * For USD/EUR use decimals

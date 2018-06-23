@@ -1,0 +1,130 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce Payment Gateway for OTP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-22 17:45+0000\n"
+"PO-Revision-Date: 2018-06-22 18:08+0000\n"
+"Last-Translator: Batiz Zoltán <world-s@freemail.hu>\n"
+"Language-Team: Magyar\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: woocommerce-otp.php:17 woocommerce-otp.php:19
+msgid "OTPBank"
+msgstr "OTPBank"
+
+#: woocommerce-otp.php:18
+msgid "OTPBank Payment Gateway Plug-in for WooCommerce"
+msgstr "OTP Bank bankkártyás fizetési átjáró bővítménye a WooCommerce-hoz"
+
+#: woocommerce-otp.php:101
+msgid "Enable / Disable"
+msgstr "Bekapcsolás/Kikapcsolás"
+
+#: woocommerce-otp.php:102
+msgid "Enable this payment gateway"
+msgstr "OTP-s fizetési átjáró engedélyezése"
+
+#: woocommerce-otp.php:107
+msgid "Title"
+msgstr "Cím"
+
+#: woocommerce-otp.php:109
+msgid "Payment title the customer will see during the checkout process."
+msgstr "Fizetési mód neve, amit a vásárló a weboldalon látni fog."
+
+#: woocommerce-otp.php:110
+msgid "Pay with OTP"
+msgstr "Fizetés OPT-vel"
+
+#: woocommerce-otp.php:113
+msgid "Description"
+msgstr "Leírás"
+
+#: woocommerce-otp.php:115
+msgid "Payment description the customer will see during the checkout process."
+msgstr "Fizetési mód leírása, amit a vásárló a weboldalon látni fog."
+
+#: woocommerce-otp.php:116
+msgid "Pay securely using OTP Bank"
+msgstr "Fizetés biztonságosan az OTP Bank használatával"
+
+#: woocommerce-otp.php:120
+msgid "OTPBank ShopID"
+msgstr "OTPBank ShopID"
+
+#: woocommerce-otp.php:122
+msgid "This is the OTPbank ShopID."
+msgstr "Ez a bolt OTPbank ShopID azonosítója, amit a bank ad a bolt számára."
+
+#: woocommerce-otp.php:126
+msgid "OTPBank Key"
+msgstr "OTPBank kulcs"
+
+#: woocommerce-otp.php:128
+msgid "This is the key for the shop."
+msgstr "Ez a bolt egyéni kulcsa amit az OTP Bank biztosít a bolt számára."
+
+#: woocommerce-otp.php:131
+msgid "Shop language"
+msgstr "Bolt nyelve"
+
+#: woocommerce-otp.php:133
+msgid "Please choose a language"
+msgstr "Válassz nyelevet"
+
+#: woocommerce-otp.php:135
+msgid "Hungarian"
+msgstr "Magyar"
+
+#: woocommerce-otp.php:136
+msgid "English"
+msgstr "Magyar"
+
+#: woocommerce-otp.php:141
+msgid "Shop currency"
+msgstr "Bolt pénzneme"
+
+#: woocommerce-otp.php:143
+msgid "Please choose a currency"
+msgstr "Válassz pánznemet"
+
+#: woocommerce-otp.php:145
+msgid "HUF"
+msgstr "HUF"
+
+#: woocommerce-otp.php:146
+msgid "EUR"
+msgstr "EUR"
+
+#: woocommerce-otp.php:147
+msgid "USD"
+msgstr "USD"
+
+#: woocommerce-otp-gateway.php:40
+msgid "Settings"
+msgstr "Beállítások"
+
+#. Name of the plugin
+msgid "Woocommerce Payment Gateway for OTP"
+msgstr "Woocommerce Payment Gateway for OTP"
+
+#. Description of the plugin
+msgid "Adds OTP Payment Gateway to Woocommerce e-commerce plugin"
+msgstr "Ez a bővítmény segítségével használható az OTP Bank fizetési átjárója"
+
+#. URI of the plugin
+msgid "https://github.com/woohgit/woocommerce-otpbank-payment-gateway"
+msgstr "https://github.com/woohgit/woocommerce-otpbank-payment-gateway"
+
+#. Author of the plugin
+msgid "Adam Papai"
+msgstr "Adam Papai"
+
+#. Author URI of the plugin
+msgid "https://www.wooh.hu"
+msgstr "https://www.wooh.hu"
