@@ -24,9 +24,11 @@ class WorkflowState {
     /**
     * @desc Asszociatív tömb betöltése WorkflowState objektumba.
     * 
+    * wp-hack: changed name from "WorkflowState" to "__construct"
+    * 
     * @param array $stateAsArray betöltendõ asszociatív tömb
     */
-    function WorkflowState($stateAsArray) {
+    function __construct($stateAsArray) {
         if (is_null($stateAsArray)) return;
         
         $this->completed = $stateAsArray['completed'];

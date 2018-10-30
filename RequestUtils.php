@@ -69,13 +69,13 @@ class RequestUtils {
 
     /**
      * Date típusú változó érték olyan string-é alakítása,
-     * mely a banki felületen a dátum/idõpomt értéket reprezentálja az egyes
+     * mely a banki felületen a dátum/idõpont értéket reprezentálja az egyes
      * hívásokban: ÉÉÉÉ.HH.NN ÓÓ:PP:MM alakú érték.
      * 
      * @param mixed value a dátum változó
      * @return string a paraméter szöveges értéke
      */
-    function dateToString($value) {
+    public static function dateToString($value) { // wp-hack: added "public static"
         $strValue = false;
         
         if (is_string($value)) {
@@ -151,5 +151,3 @@ class RequestUtils {
     }
     
 }
-
-?>

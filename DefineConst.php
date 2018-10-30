@@ -111,5 +111,3 @@ define('RESENDDELAY',  1);
 /* Banki kommunikáció: Újraküldések csak akkor lehetségesek, ha a lenti szöveg
    szerepel az elutasításhoz tartozó kivételben. */
 define('RESEND_ERRORPATTERN',  "Maximum workflow number is reached");
-
-?>

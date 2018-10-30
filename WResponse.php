@@ -13,7 +13,7 @@ require_once 'WebShopXmlUtils.php';
 * 
 * @version 4.0
 */
-class WResponse  {
+class WResponse {
 
     /***************
      * Folyamat-példány bank oldali azonosítója
@@ -87,11 +87,13 @@ class WResponse  {
     /**
     * Konstruktor.
     * 
+    * wp-hack: Changed function name from "WResponse" to "__construct"
+    * 
     * @param string $workflowname az indított tranzakció kódja
     * @param WorkflowState $workflowState a banki SOAP felület válaszának
     *        bean reprezenzációja
     */
-    function WResponse ($workflowname, $workflowState) {
+    function __construct($workflowname, $workflowState) {
         if (is_null($workflowState)) return;
         $this->instanceId = $workflowState->instanceId;
         $this->finished = ($workflowState->completed && ! $workflowState->timeout);
@@ -225,5 +227,3 @@ class WResponse  {
     }
 
 }
-
-?>

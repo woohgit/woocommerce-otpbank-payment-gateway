@@ -122,5 +122,3 @@ function fizetesAdatokCmp($arg1, $arg2) {
         $arg1->getTeljesites() . $arg1->getAzonosito(), 
         $arg2->getTeljesites() . $arg2->getAzonosito() );
 }
-
-?>

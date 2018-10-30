@@ -162,7 +162,7 @@ class WebShopXmlUtils {
     * @param DOMDocument / DOMNode $node a kiértékelés helye
     * @param string $xpath xpath kifejezés
     */
-    function getNodeArrayByXPath($node, $xpath) {
+    public static function getNodeArrayByXPath($node, $xpath) { // wp-hack: added "public static"
         $doc = NULL;
         if (is_a($node, 'DOMDocument')) {
             $doc = $node;
@@ -238,5 +238,3 @@ class WebShopXmlUtils {
     }
   
 }
-
-?>
