@@ -91,5 +91,3 @@ function getMessageText($messageCode)  {
     global $errorMessages;
     return $errorMessages[$messageCode];
 }
-
-?>

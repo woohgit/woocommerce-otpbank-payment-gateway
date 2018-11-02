@@ -2,16 +2,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Woocommerce Payment Gateway for OTP\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-22 17:45+0000\n"
-"PO-Revision-Date: 2018-06-22 18:08+0000\n"
+"POT-Creation-Date: 2018-10-30 09:05+0100\n"
+"PO-Revision-Date: 2018-10-30 09:19+0100\n"
 "Last-Translator: Batiz Zoltán <world-s@freemail.hu>\n"
 "Language-Team: Magyar\n"
 "Language: hu_HU\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: woocommerce-otp-gateway.php:40
+msgid "Settings"
+msgstr "Beállítások"
 
 #: woocommerce-otp.php:17 woocommerce-otp.php:19
 msgid "OTPBank"
@@ -20,6 +28,22 @@ msgstr "OTPBank"
 #: woocommerce-otp.php:18
 msgid "OTPBank Payment Gateway Plug-in for WooCommerce"
 msgstr "OTP Bank bankkártyás fizetési átjáró bővítménye a WooCommerce-hoz"
+
+#: woocommerce-otp.php:69
+msgid "OTP payment completed"
+msgstr "OTP fizetés sikeres"
+
+#: woocommerce-otp.php:76
+msgid "Rejected payment"
+msgstr "Fizetés visszautasítva"
+
+#: woocommerce-otp.php:82
+msgid "Unsuccessful payment"
+msgstr "Sikertelen fizetés"
+
+#: woocommerce-otp.php:89
+msgid "No response from OTP server"
+msgstr "Nem válaszolt az OTP szervere"
 
 #: woocommerce-otp.php:101
 msgid "Enable / Disable"
@@ -39,7 +63,7 @@ msgstr "Fizetési mód neve, amit a vásárló a weboldalon látni fog."
 
 #: woocommerce-otp.php:110
 msgid "Pay with OTP"
-msgstr "Fizetés OPT-vel"
+msgstr "Fizetés OTP-vel"
 
 #: woocommerce-otp.php:113
 msgid "Description"
@@ -83,7 +107,7 @@ msgstr "Magyar"
 
 #: woocommerce-otp.php:136
 msgid "English"
-msgstr "Magyar"
+msgstr "Angol"
 
 #: woocommerce-otp.php:141
 msgid "Shop currency"
@@ -105,26 +129,35 @@ msgstr "EUR"
 msgid "USD"
 msgstr "USD"
 
-#: woocommerce-otp-gateway.php:40
-msgid "Settings"
-msgstr "Beállítások"
+#: woocommerce-otp.php:153
+msgid "Status of payed orders"
+msgstr "Állapot sikeres fizetés után"
 
-#. Name of the plugin
+#: woocommerce-otp.php:155
+msgid "When the payment was successfull, this will be the status of the order."
+msgstr ""
+"Ha sikeres egy fizetés, akkor az itt beállított érték lesz a rendelés "
+"állapota."
+
+#: woocommerce-otp.php:157
+msgid "processing"
+msgstr "Feldolgozás alatt"
+
+#: woocommerce-otp.php:159
+msgid "completed"
+msgstr "Teljesítve"
+
 msgid "Woocommerce Payment Gateway for OTP"
 msgstr "Woocommerce Payment Gateway for OTP"
 
-#. Description of the plugin
 msgid "Adds OTP Payment Gateway to Woocommerce e-commerce plugin"
 msgstr "Ez a bővítmény segítségével használható az OTP Bank fizetési átjárója"
 
-#. URI of the plugin
 msgid "https://github.com/woohgit/woocommerce-otpbank-payment-gateway"
 msgstr "https://github.com/woohgit/woocommerce-otpbank-payment-gateway"
 
-#. Author of the plugin
 msgid "Adam Papai"
 msgstr "Adam Papai"
 
-#. Author URI of the plugin
 msgid "https://www.wooh.hu"
 msgstr "https://www.wooh.hu"

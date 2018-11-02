@@ -25,5 +25,3 @@ class WebShopKulcsAdatok {
         $this->lejarat = $lejarat;
     }
 }
-
-?>

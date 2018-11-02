@@ -40,5 +40,3 @@ function wooh_otpbank_action_links($links) {
     $plugin_links = array('<a href="'.admin_url('admin.php?page=wc-settings&tab=checkout').'">'.__('Settings', 'woocommerce-otpbank').'</a>',);
     return array_merge($plugin_links,$links);
 }
-
-?>

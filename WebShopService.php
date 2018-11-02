@@ -21,7 +21,8 @@ class WebShopService {
         'tranzakcioStatuszLekerdezes' => 'tranzakcioStatuszLekerdezes'
     );
 
-    function WebShopService() {
+    // wp-hack: changed function name from "WebShopService" to "__construct"
+    function __construct() {
         $this->soapClient = SoapUtils::createSoapClient();
     }
 
@@ -371,4 +372,3 @@ class WebShopService {
     }
 }
 
-?>

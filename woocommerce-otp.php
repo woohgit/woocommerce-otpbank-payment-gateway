@@ -26,6 +26,7 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
         $this->private_key          = $this->get_option( 'shop_key' );
         $this->shop_lang            = $this->get_option( 'shop_lang' );
         $this->shop_currency        = $this->get_option( 'shop_currency' );
+        $this->payed_order_status   = $this->get_option( 'payed_order_status' ); // wp-hack: added new option
 
         foreach ( $this->settings as $setting_key => $value ) {
             $this->$setting_key = $value;
@@ -66,27 +67,32 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
                     $this->log->add("otpbank", "Sikeres fizetes " . $this->pos_id . " - " . $tranzAzon );
 
                     $return_url = $this->get_return_url( $customer_order );
-                    $customer_order->add_order_note( __( 'OTP payment completed', 'woocommerce' ) );
+                    $customer_order->add_order_note( __( 'OTP payment completed', 'woocommerce-otpbank' ) ); // wp-hack: fordítási domain el volt írva
                     $woocommerce->cart->empty_cart();
                     $customer_order->payment_complete( $order_id );
+                    // wp-hack: change state if needed
+                    if ( 'completed' == $this->payed_order_status ) {
+                        $res = (int) $customer_order->update_status( 'completed', 'Sikeres OTP-s fizetés után automatikusan átállítva.' );
+                        $this->log->add("otpbank", "Allapot allitas 'completed'-re, eredmeny: $res ($this->pos_id - $tranzAzon)" );
+                    }
 
                     wp_redirect( $return_url );
                 } else if ("VISSZAUTASITOTTFIZETES" == $responseCode) {
                     $this->log->add("otpbank", "Rejected pament " . $this->pos_id . " - " . $tranzAzon );
-                    $customer_order->add_order_note( __( 'Rejected payment', 'woocommerce' ) );
+                    $customer_order->add_order_note( __( 'Rejected payment', 'woocommerce-otpbank' ) ); // wp-hack: fordítási domain el volt írva
                     $customer_order->update_status( 'failed', "Rejected payment" );
                     $return_url = $this->get_return_url( $customer_order );
                     wp_redirect( $return_url );
                 } else {
                     $this->log->add("otpbank", "Sikertelen fizetes " . $this->pos_id . " - " . $tranzAzon );
-                    $customer_order->add_order_note( __( 'Unsuccessful payment', 'woocommerce' ) );
+                    $customer_order->add_order_note( __( 'Unsuccessful payment', 'woocommerce-otpbank' ) ); // wp-hack: fordítási domain el volt írva
                     $customer_order->update_status( 'failed', "Unsuccessful payment" );
                     $return_url = $this->get_return_url( $customer_order );
                     wp_redirect( $return_url );
                 }
             } else {
                 $this->log->add("otpbank", "Nincs valasz " . $this->pos_id . " - " . $tranzAzon );
-                $customer_order->add_order_note( __( 'Nem jott valasz az OTP servertol', 'woocommerce' ) );
+                $customer_order->add_order_note( __( 'No response from OTP server', 'woocommerce-otpbank' ) ); // wp-hack: fordítási kulcs és domain el volt írva (Nem jott valasz az OTP servertol)
                 $customer_order->update_status( 'failed', "Unsuccessful payment - failed to communicate with the server" );
                 $return_url = $this->get_return_url( $customer_order );
                 wp_redirect( $return_url );
@@ -147,7 +153,18 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
                     'USD'   => __('USD', 'woocommerce-otpbank')
                     ),
                 'desc_tip'    => true,
-                )
+                ),
+            // wp-hack: added one more option
+            'payed_order_status' => array(
+                'title' => __('Status of payed orders', 'woocommerce-otpbank'),
+                'type'        => 'select',
+                'description' => __('When the payment was successfull, this will be the status of the order.', 'woocommerce-otpbank'),
+                'options'   => array(
+                    'processing' => __('processing', 'woocommerce-otpbank'), // Feldolgozás alatt
+                    'completed'  => __('completed', 'woocommerce-otpbank'), // Teljesítve
+                    ),
+                'desc_tip'    => true,
+                ),
             );
     }
 
@@ -189,12 +206,13 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
 
 
         $_REQUEST['posId']      = $this->pos_id;
-	// if HUF, it should be fixed int
-	if ($this->shop_currency != "HUF") {
-            $_REQUEST['osszeg']     = number_format($customer_order->order_total,2,',','');
-	} else {
-            $_REQUEST['osszeg']     = intval($customer_order->order_total);
-	}
+        // if HUF, it should be fixed int
+        $order_total = $customer_order->get_total(); // wp-hack: use getter function to get total value
+        if ($this->shop_currency != "HUF") {
+            $_REQUEST['osszeg']     = number_format($order_total, 2, ',', '');
+        } else {
+            $_REQUEST['osszeg']     = intval($order_total);
+        }
         $_REQUEST['devizanem']  = $this->shop_currency;
         $_REQUEST['nyelvkod']   = $this->shop_lang;
         $_REQUEST['backURL']    = $backURL;
@@ -262,5 +280,3 @@ class WC_Gateway_OTPBank extends WC_Payment_Gateway {
         return true;
     }
 } // End of OTPBank
-
-?>
